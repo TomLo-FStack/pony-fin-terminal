@@ -1,0 +1,6 @@
+# One symbol per line. Stooq US symbols can be written as AAPL or AAPL.US.
+AAPL
+MSFT
+NVDA
+TSLA
+SPY

@@ -1,0 +1,8 @@
+{
+  "deps": [],
+  "info": {
+    "name": "pony-fin-terminal",
+    "description": "A small Pony finance terminal backed by public Stooq quote CSV data.",
+    "license": "MIT"
+  }
+}

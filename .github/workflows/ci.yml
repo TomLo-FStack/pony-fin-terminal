@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Pony
+        run: |
+          sh scripts/install-pony-linux.sh .toolchains/pony-linux
+
+      - name: Build
+        run: |
+          mkdir -p build/ci
+          .toolchains/pony-linux/ponyc/bin/ponyc src --output build/ci --bin-name pony-fin-terminal --verbose=0
+
+      - name: Smoke test
+        run: |
+          ./build/ci/pony-fin-terminal source

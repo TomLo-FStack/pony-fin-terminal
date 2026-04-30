@@ -1,0 +1,9 @@
+build/
+.pony-fin-cache/
+.toolchains/
+*.exe
+*.pdb
+*.ilk
+*.obj
+*.bc
+*.ll
